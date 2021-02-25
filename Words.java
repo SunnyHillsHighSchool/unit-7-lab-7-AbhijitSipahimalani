@@ -13,6 +13,9 @@ public class Words
 
 	public Words(String[] wordList)
 	{
+//for(int i = 0; i < wordList.Length(); i++){
+//words.add(wordList[i]);
+  }
 	}
 
 	public int countWordsWithXChars(int size)
