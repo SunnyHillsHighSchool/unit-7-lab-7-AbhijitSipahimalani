@@ -18,6 +18,11 @@ public class Words
 	public int countWordsWithXChars(int size)
 	{
 		int count=0;
+    for(int i = 0; i < words.length; i++)
+    {
+      if(words.get(i).getLength == size)
+      count ++;
+    }
 		return count;
 	}
 	
