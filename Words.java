@@ -13,6 +13,7 @@ public class Words
 
 	public Words(String[] wordList)
 	{
+    //ask Mrs. Diester about creating a constructor and assigning the words from the words from the wordList into the array list into a word. 
 	}
 
 	public int countWordsWithXChars(int size)
@@ -50,4 +51,8 @@ public class Words
 		return count;
   }
 	//add in a toString
+  public String toString(){
+  //ask what should be done for the toString method 
+    return words 
+  }
 }
