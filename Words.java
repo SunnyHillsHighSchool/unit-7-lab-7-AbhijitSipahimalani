@@ -43,7 +43,7 @@ public class Words
 	public int countWordsWithXVowels(int numVowels)
 	{
 		int count=0;
-    for (i = 0; i < words.length; i++){
+    for (int i = 0; i < words.length; i++){
       if(words.get(i).getNumVowel == numVowels)
         count ++; 
     }
