@@ -1,6 +1,6 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
-//Name -
+//Name - Abhijit Sipahimalani
 
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -30,14 +30,24 @@ public class Words
 	//this method will also return the sum of the vowels in all words removed
 	public int removeWordsWithXChars(int size)
 	{
-		return 0;
+    int count = 0;
+    for(int i = words.length - 1; i > 0; i--){
+      if (words.get(i).getLength == size){
+        count += words.get(i).getNumVowel; 
+        words.remove(i);
+      }
+    }
+    return count;
 	}
 
 	public int countWordsWithXVowels(int numVowels)
 	{
 		int count=0;
+    for (i = 0; i < words.length; i++){
+      if(words.get(i).getNumVowel == numVowels)
+        count ++; 
+    }
 		return count;
-	}
-	
+  }
 	//add in a toString
 }
