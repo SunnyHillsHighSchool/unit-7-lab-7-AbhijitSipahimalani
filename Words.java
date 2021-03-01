@@ -13,15 +13,20 @@ public class Words
 
 	public Words(String[] wordList)
 	{
-    //ask Mrs. Diester about creating a constructor and assigning the words from the words from the wordList into the array list into a word. 
+    words = new ArrayList<Word>();
+
+    for(int i = 0; i < wordList.length; i++){
+      Word a = new Word(wordList[i]);
+      words.add(i,a);
+    }
 	}
 
 	public int countWordsWithXChars(int size)
 	{
 		int count=0;
-    for(int i = 0; i < words.length; i++)
+    for(int i = 0; i < words.size(); i++)
     {
-      if(words.get(i).getLength == size)
+      if(words.get(i).getLength() == size)
       count ++;
     }
 		return count;
@@ -32,9 +37,9 @@ public class Words
 	public int removeWordsWithXChars(int size)
 	{
     int count = 0;
-    for(int i = words.length - 1; i > 0; i--){
-      if (words.get(i).getLength == size){
-        count += words.get(i).getNumVowel; 
+    for(int i = words.size() - 1; i > 0; i--){
+      if (words.get(i).getLength() == size){
+        count += words.get(i).getNumVowels(); 
         words.remove(i);
       }
     }
@@ -44,15 +49,19 @@ public class Words
 	public int countWordsWithXVowels(int numVowels)
 	{
 		int count=0;
-    for (int i = 0; i < words.length; i++){
-      if(words.get(i).getNumVowel == numVowels)
+    for (int i = 0; i < words.size(); i++){
+      if(words.get(i).getNumVowels() == numVowels)
         count ++; 
     }
 		return count;
   }
 	//add in a toString
   public String toString(){
-  //ask what should be done for the toString method 
-    return words 
-  }
+    String A = "";
+    for (int i =0; i < words.size(); i++){
+      A += " ";
+      A +=  words.get(i).getWord();
+    }  
+    return A;
+    }
 }
